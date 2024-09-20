@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
+
+/* Global CSS starts */
+:root {
+    --redhat-font-family: "Red Hat Display", sans-serif;
+    --font-size: 16px;
+    --fw-500: 500;
+    --fw-700: 700;
+    --fw-900: 900;
+
+    
+    --pale-blue: hsl(225, 100%, 94%);
+    --bright-blue: hsl(245, 75%, 52%);
+    --very-pale-blue: hsl(225, 100%, 98%);
+    --desaturated-blue: hsl(224, 23%, 55%);
+    --dark-blue: hsl(223, 47%, 23%);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: var(--font-size);
+}
+
+body {
+    background: url(../images/pattern-background-desktop.svg) no-repeat;
+    background-color: var(--pale-blue);
+}
+
+ul {
+    list-style-type: none;
+}
+
+.container {
+    display: grid;
+    place-items: center;
+    margin: 2rem 0;
+}
+
+.upper-data img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.bottom-data {
+    background-color: var(--very-pale-blue);
+    border-radius: 10px 10px 0 0;
+    text-align: center;
+    font-family: var(--redhat-font-family);
+}
+
+.bottom-data h1 {
+    padding: 1.1rem 1rem;
+    font-weight: var(--fw-900);
+}
+
+.bottom-data .main-para {
+    max-width: 28.125rem;
+    padding: 0 3.5rem;
+    color: var(--desaturated-blue);
+    font-weight: var(--fw-500);
+}
+
+.bottom-data .annual-plan {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: hsl(224, 52%, 94%);
+    margin: 1rem 3rem;
+    padding: 1rem;
+    border-radius: 10px;
+}
+
+.bottom-data .annual-plan .one-class {
+    display: flex;
+}
+
+.bottom-data .annual-plan-inner {
+    margin-left: 1rem;
+}
+
+.bottom-data .annual-plan-inner .ap {
+    padding-bottom: 0.2rem;
+    font-weight: var(--fw-900);
+}
+
+.bottom-data .annual-plan-inner .amount {
+    color: var(--desaturated-blue);
+    font-weight: var(--fw-500);
+}
+
+.bottom-data .change {
+    color: var(--bright-blue);
+    font-weight: var(--fw-700);
+}
+
+button {
+    width: 80%;
+    padding: 0.7rem 3rem;
+    border: none;
+    border-radius: 10px;
+    color: var(--pale-blue);
+    background-color: var(--bright-blue);
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: var(--desaturated-blue);
+}
+
+.bottom-data .cancel {
+    padding: 1.5rem 0;
+    color: var(--desaturated-blue);
+    font-weight: var(--fw-700);
+    text-decoration: none;
+    display: grid;
+}
+
+.bottom-data .cancel:hover {
+    color: var(--dark-blue);
+}
+
+.attribution {
+    font-size: var(--font-size);
+    text-align: center;
+}
+
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}
+
+/* Media Queries */
+@media (max-width: 569px) {
+    body {
+        background-image: url(../images/pattern-background-mobile.svg);
+    }
+
+    .card {
+        width: 90%;
+        max-width: 37.5rem;
+        /* 600px */
+    }
+}
+
+@media (max-width: 450px) {
+    .annual-plan {
+        flex-direction: column;
+        align-items: center;
+        margin: 1rem;
+        padding: 0.8rem 0;
+    }
+
+    .annual-plan .one-class {
+        margin-bottom: 1rem;
+        justify-content: center;
+    }
+
+    .annual-plan-inner {
+        text-align: center;
+    }
+
+    .annual-plan .change {
+        margin-top: 0.5rem;
+    }
+}
